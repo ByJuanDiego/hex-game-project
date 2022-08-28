@@ -217,8 +217,8 @@ void Game::MostrarGanador(Player winner){
 
     sf::Font font;
     font.loadFromFile("../assets/fonts/ChrustyRock.ttf");
-    Word* WinnerMessage = new Word(font, ((winner == player)? "Ganaste!":"Perdiste!"), {850 * cFactor, 500 * cFactor}, 100, sf::Color::White);
-    Word* LeaveMessage = new Word(font, "(Click en cualquier parte para salir)", {400 * cFactor, 700 * cFactor}, 80, sf::Color::White);
+    Word* WinnerMessage = new Word(font, ((winner == player)? "Ganaste!":"Perdiste!"), {850 * cFactor, 500 * cFactor}, 100 * cFactor, sf::Color::White);
+    Word* LeaveMessage = new Word(font, "(Click en cualquier parte para salir)", {400 * cFactor, 700 * cFactor}, 80 * cFactor, sf::Color::White);
 
     while (canvas->isOpen()){
         sf::Event event{};

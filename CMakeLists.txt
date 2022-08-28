@@ -26,8 +26,9 @@ if (APPLE OR UNIX)
 
 elseif(WIN32)
 
+    set(SFML_ROOT "C:/SFML/SFML-2.5.1/64bit")
+    set(SFML_DIR "${SFML_ROOT}/lib/cmake/SFML")
     set(SFML_STATIC_LIBRARIES TRUE)
-    set(SFML_DIR C:/SFML/lib/cmake/SFML)
 
     find_package(SFML 2.5.1 COMPONENTS system window graphics audio REQUIRED)
 
