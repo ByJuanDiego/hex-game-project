@@ -1,0 +1,2 @@
+rectangulo 1 700 600 300 200 Red 70
+rectangulo 2 1200 600 300 200 Blue 70
