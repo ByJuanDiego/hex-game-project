@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 3.16.3)
 project(CS2013_Project)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -8,21 +8,13 @@ file(GLOB SOURCE_FILES
         main.cpp
         src/*.cpp
         include/*.h
-        include/Menu.h
-        src/Menu.cpp
         )
 
-add_executable(${PROJECT_NAME} ${SOURCE_FILES} include/hexagon.h src/hexagon.cpp include/HexagonFactory.h include/Render.h src/Word.cpp include/Word.h src/figure.cpp include/figure.h src/rectangle.cpp include/rectangle.h src/Options.cpp include/Options.h include/RectangleFactory.h)
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 if (APPLE OR UNIX)
 
-    find_package(SFML 2.5.1 COMPONENTS system window graphics network audio REQUIRED)
-
-    if(SFML_FOUND)
-        message("SFML FOUND")
-        include_directories(${SFML_INCLUDE_DIR})
-        target_link_libraries(${PROJECT_NAME}  sfml-system sfml-window sfml-graphics sfml-audio)
-    endif()
+    target_link_libraries(${PROJECT_NAME}  sfml-system sfml-window sfml-graphics sfml-audio)
 
 elseif(WIN32)
 
